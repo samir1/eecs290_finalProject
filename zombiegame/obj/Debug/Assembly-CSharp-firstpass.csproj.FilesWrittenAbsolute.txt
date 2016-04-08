@@ -1,0 +1,17 @@
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/UnityEngine.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/UnityEditor.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/Mono.Cecil.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/Unity.DataContract.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/Samir/Dropbox/EECS 290/HW6/ch06/Temp/bin/Debug/Mono.Cecil.Mdb.dll
