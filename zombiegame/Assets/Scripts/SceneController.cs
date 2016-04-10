@@ -28,68 +28,68 @@ public class SceneController : MonoBehaviour {
 			first_round = false;
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(0, 0, 0);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			float angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(2, 0, 2);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(-2, 0, 2);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(2, 0, -2);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(-2, 0, -2);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
 
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(16, 0, 0);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(-16, 0, 0);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(16, 0, 10);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(16, 0, -10);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(-16, 0, 10);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
 
 			_enemy = Instantiate(enemyPrefab) as GameObject;
-			_enemy.transform.position = new Vector3(-16, 0, -10);
+			_enemy.transform.position = new Vector3(245, 1.5f, 869);
 			angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
 			_enemy.GetComponent<WanderingAI>().SetAlive(true);
