@@ -18,7 +18,7 @@ public class UItrigger : MonoBehaviour {
 
 	void Awake (){
 
-		welcome = welcomeCanvas.GetComponentInChildren<Text>();
+//		welcome = welcomeCanvas.GetComponentInChildren<Text>();
 
 	}
 
