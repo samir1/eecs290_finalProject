@@ -79,7 +79,13 @@ public class WanderingAI : MonoBehaviour {
 				_multiplier = 8.0f;
 			}
 
-			transform.Translate(0, 0, _multiplier*speed * Time.deltaTime);
+			// make sure the enemy ai walks on the terrain
+			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up)) || Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down))) {
+				transform.position = new Vector3(transform.position.x, Terrain.activeTerrain.SampleHeight(transform.position), transform.position.z);
+				transform.Translate(0, 0, _multiplier * speed * Time.deltaTime);
+			} else {
+				transform.Translate(0, 0, _multiplier * speed * Time.deltaTime);
+			}
 
 			Ray ray = new Ray(transform.position, transform.forward);
 			RaycastHit hit;
