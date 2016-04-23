@@ -70,8 +70,8 @@ public class WanderingAI : MonoBehaviour {
 			Vector3 diff = playerObject.transform.position - transform.position;
 			float range = diff.magnitude;
 
-			if (range > 8.0f && _animState != 1) {
-				facePlayer();
+			if (range > 10.0f && _animState != 1) {
+//				facePlayer();
 				anim.SetInteger("zombieToState", 1);
 				_multiplier = 1.0f;
 			}
@@ -81,7 +81,7 @@ public class WanderingAI : MonoBehaviour {
 //				_multiplier = 1.0f;
 //			}
 
-			if (range <= 6.0f  && _animState != 3) {
+			if (range <= 10.0f  && _animState != 3) {
 				facePlayer(); 
 				anim.SetInteger("zombieToState", 3);
 				_multiplier = 18.0f;

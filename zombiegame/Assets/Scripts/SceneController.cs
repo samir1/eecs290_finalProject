@@ -7,6 +7,10 @@ public class SceneController : MonoBehaviour {
 	private GameObject _enemy;
 	private bool first_round = true;
 
+	void Start() {
+		InvokeRepeating("spawnEnemiesNearPlayer", 60f, 60f);
+	}
+
 	void OnGUI() {
 		if (_enemy == null &&!first_round) {
 			var style = new GUIStyle("label");
@@ -24,7 +28,6 @@ public class SceneController : MonoBehaviour {
 
 	void Update() {
 		if (_enemy == null && first_round) {
-			
 			first_round = false;
 
 			for (int i = -5; i < 5; i++) {
@@ -34,7 +37,37 @@ public class SceneController : MonoBehaviour {
 				_enemy.transform.Rotate (0, angle, 0);
 				_enemy.GetComponent<WanderingAI> ().SetAlive (true);
 			}
-
 		}
+
+	}
+
+	void spawnEnemiesNearPlayer() {
+
+		GameObject playerObject = GameObject.Find("Player");
+		Vector3 playerPos = playerObject.transform.position;
+
+		_enemy = Instantiate (enemyPrefab) as GameObject;
+		_enemy.transform.position = new Vector3 (playerPos.x + 10f, 1.5f, playerPos.z);
+		float angle = Random.Range (0, 360);
+		_enemy.transform.Rotate (0, angle, 0);
+		_enemy.GetComponent<WanderingAI> ().SetAlive (true);
+
+		_enemy = Instantiate (enemyPrefab) as GameObject;
+		_enemy.transform.position = new Vector3 (playerPos.x - 10f, 1.5f, playerPos.z);
+		angle = Random.Range (0, 360);
+		_enemy.transform.Rotate (0, angle, 0);
+		_enemy.GetComponent<WanderingAI> ().SetAlive (true);
+
+		_enemy = Instantiate (enemyPrefab) as GameObject;
+		_enemy.transform.position = new Vector3 (playerPos.x, 1.5f, playerPos.z + 10f);
+		angle = Random.Range (0, 360);
+		_enemy.transform.Rotate (0, angle, 0);
+		_enemy.GetComponent<WanderingAI> ().SetAlive (true);
+
+		_enemy = Instantiate (enemyPrefab) as GameObject;
+		_enemy.transform.position = new Vector3 (playerPos.x, 1.5f, playerPos.z - 10f);
+		angle = Random.Range (0, 360);
+		_enemy.transform.Rotate (0, angle, 0);
+		_enemy.GetComponent<WanderingAI> ().SetAlive (true);
 	}
 }
