@@ -8,7 +8,7 @@ public class SceneController : MonoBehaviour {
 	private bool first_round = true;
 
 	void Start() {
-		InvokeRepeating("spawnEnemiesNearPlayer", 60f, 60f);
+		InvokeRepeating("spawnEnemiesNearPlayer", 60f, 30f);
 	}
 
 //	void OnGUI() {
