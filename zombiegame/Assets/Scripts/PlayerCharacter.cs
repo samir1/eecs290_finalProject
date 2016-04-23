@@ -17,5 +17,5 @@ public class PlayerCharacter : MonoBehaviour {
 	public void Update() {
 		Debug.Log (Time.time);
 	}
-
+		
 }
