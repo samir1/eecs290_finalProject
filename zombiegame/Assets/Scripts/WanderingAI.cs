@@ -71,19 +71,16 @@ public class WanderingAI : MonoBehaviour {
 			float range = diff.magnitude;
 
 			if (range > 15.0f && _animState != 1) {
-//				facePlayer();
 				anim.SetInteger("zombieToState", 1);
 				_multiplier = 1.0f;
 			}
 
-			if (range > 15.0f && range <= 10.0f && _animState != 1) { 
-				facePlayer();
+			if (range > 15.0f && range <= 10.0f && _animState != 1) {
 				anim.SetInteger("zombieToState", 1);
 				_multiplier = 1.0f;
 			}
 
 			if (range <= 10.0f  && _animState != 3) {
-				facePlayer(); 
 				anim.SetInteger("zombieToState", 3);
 				_multiplier = 18.0f;
 			}
@@ -91,27 +88,29 @@ public class WanderingAI : MonoBehaviour {
 			// make sure the enemy ai walks on the terrain
 			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up)) || Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down))) {
 				transform.position = new Vector3(transform.position.x, Terrain.activeTerrain.SampleHeight(transform.position), transform.position.z);
+				facePlayer();
 				transform.Translate(0, 0, _multiplier * speed * Time.deltaTime);
 			} else {
+				facePlayer();
 				transform.Translate(0, 0, _multiplier * speed * Time.deltaTime);
 			}
 
-			Ray ray = new Ray(transform.position, transform.forward);
-			RaycastHit hit;
-			if (Physics.SphereCast(ray, 0.75f, out hit)) {
-				GameObject hitObject = hit.transform.gameObject;
-				if (hitObject.GetComponent<PlayerCharacter>()) {
-					if (_fireball == null) {
-						_fireball = Instantiate(fireballPrefab) as GameObject;
-						_fireball.transform.position = transform.TransformPoint(Vector3.forward * 2.0f);
-						_fireball.transform.rotation = transform.rotation;
-					}
-				}
-				else if (hit.distance < obstacleRange) {
-					float angle = Random.Range(-110, 110);
-					transform.Rotate(0, angle, 0);
-				}
-			}
+//			Ray ray = new Ray(transform.position, transform.forward);
+//			RaycastHit hit;
+//			if (Physics.SphereCast(ray, 0.75f, out hit)) {
+//				GameObject hitObject = hit.transform.gameObject;
+//				if (hitObject.GetComponent<PlayerCharacter>()) {
+//					if (_fireball == null) {
+//						_fireball = Instantiate(fireballPrefab) as GameObject;
+//						_fireball.transform.position = transform.TransformPoint(Vector3.forward * 2.0f);
+//						_fireball.transform.rotation = transform.rotation;
+//					}
+//				}
+//				else if (hit.distance < obstacleRange) {
+//					float angle = Random.Range(-110, 110);
+//					transform.Rotate(0, angle, 0);
+//				}
+//			}
 		}
 	}
 

@@ -11,20 +11,20 @@ public class SceneController : MonoBehaviour {
 		InvokeRepeating("spawnEnemiesNearPlayer", 60f, 60f);
 	}
 
-	void OnGUI() {
-		if (_enemy == null &&!first_round) {
-			var style = new GUIStyle("label");
-			style.fontSize = 80;
-			GUI.Label(new Rect (Screen.width / 2, Screen.height, 150, 25), "<size=40>Lose</size>");
-//			GUI.Label (Rect(9, 30, 500, 20), "Congratulations! You have saved Earth from the Zombie Apocalypse!", style); 
-			if (GUI.Button (new Rect (Screen.width / 2, 3*Screen.height / 4, 150, 25), "Start Game")) {
-				SceneManager.LoadScene("Scene") ;
-			}
-			if (GUI.Button (new Rect (Screen.width / 2, 3*Screen.height / 4 + 25, 150, 25), "End Game")) {
-				Application.Quit();
-			}
-		}
-	}
+//	void OnGUI() {
+//		if (_enemy == null &&!first_round) {
+//			var style = new GUIStyle("label");
+//			style.fontSize = 80;
+//			GUI.Label(new Rect (Screen.width / 2, Screen.height, 150, 25), "<size=40>Lose</size>");
+////			GUI.Label (Rect(9, 30, 500, 20), "Congratulations! You have saved Earth from the Zombie Apocalypse!", style); 
+//			if (GUI.Button (new Rect (Screen.width / 2, 3*Screen.height / 4, 150, 25), "Start Game")) {
+//				SceneManager.LoadScene("Scene") ;
+//			}
+//			if (GUI.Button (new Rect (Screen.width / 2, 3*Screen.height / 4 + 25, 150, 25), "End Game")) {
+//				Application.Quit();
+//			}
+//		}
+//	}
 
 	void Update() {
 		if (_enemy == null && first_round) {
