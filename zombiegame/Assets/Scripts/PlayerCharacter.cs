@@ -53,10 +53,12 @@ public class PlayerCharacter : MonoBehaviour {
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit) {
-		if (hit.gameObject.CompareTag("Zombie")) // collision with zombie
-			subtractHealth(10f);
-		else if(hit.gameObject.CompareTag("HealthPack")) // collision with Health Pack
-			addHealth(50f);
+		if (hit.gameObject.CompareTag ("Zombie")) // collision with zombie
+			subtractHealth (10f);
+		else if (hit.gameObject.CompareTag("HealthPack")) { // collision with Health Pack
+			DestroyObject (hit.gameObject);
+			addHealth (50f);
+		}
 	}
 
 	//Displays Restart Screen prompt
