@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 using System;
 
 public class PlayerCharacter : MonoBehaviour {
-	private int health;
+	public float health;
 	public Image healthBar;
 	public GameObject restartDialog;
 
 	void Start() {
-		health = 100;
+		health = 100f;
 		InvokeRepeating("decreaseHealthOverTime", 30f, 30f);
 	}
 
@@ -25,7 +25,7 @@ public class PlayerCharacter : MonoBehaviour {
 	}
 
 	public void decreaseHealthOverTime() {
-		subtractHealth(10);
+		subtractHealth(10f);
 	}
 
 	//Checks the players current health
@@ -36,16 +36,16 @@ public class PlayerCharacter : MonoBehaviour {
 	}
 
 	//adds to health to player
-	public void addHealth(int amount){
-		if (health + amount > 100)
-			health = 100;
+	public void addHealth(float amount){
+		if (health + amount > 100f)
+			health = 100f;
 		else
 			health += amount;
 
 	}
 
 	//subtracts health from player
-	public void subtractHealth(int amount){
+	public void subtractHealth(float amount){
 		if (health - amount < 0.0f)
 			health = 0;
 		else
@@ -54,9 +54,9 @@ public class PlayerCharacter : MonoBehaviour {
 
 	void OnControllerColliderHit(ControllerColliderHit hit) {
 		if (hit.gameObject.CompareTag("Zombie")) // collision with zombie
-			subtractHealth(10);
+			subtractHealth(10f);
 		else if(hit.gameObject.CompareTag("HealthPack")) // collision with Health Pack
-			addHealth(50);
+			addHealth(50f);
 	}
 
 	//Displays Restart Screen prompt
