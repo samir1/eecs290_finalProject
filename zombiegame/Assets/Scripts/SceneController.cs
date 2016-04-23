@@ -8,7 +8,7 @@ public class SceneController : MonoBehaviour {
 	private bool first_round = true;
 
 	void Start() {
-		InvokeRepeating("spawnEnemiesNearPlayer", 60f, 30f);
+		InvokeRepeating("spawnEnemiesNearPlayer", 30f, 30f);
 	}
 
 //	void OnGUI() {
@@ -31,8 +31,10 @@ public class SceneController : MonoBehaviour {
 			first_round = false;
 
 			for (int i = -5; i < 5; i++) {
-				spawnZombieAtPosition(287.1f + i*2, 1.5f, 870);
+				spawnZombieAtPosition (287.1f + i * 2, 1.5f, 870);
 			}
+		} else if (_enemy == null && !first_round) { // spawn enemies if none on the map
+			spawnEnemiesNearPlayer();
 		}
 
 	}
@@ -49,10 +51,14 @@ public class SceneController : MonoBehaviour {
 	void spawnEnemiesNearPlayer() {
 		GameObject playerObject = GameObject.Find("Player");
 		Vector3 playerPos = playerObject.transform.position;
+		PlayerCharacter playerScript = playerObject.GetComponent<PlayerCharacter>();
+		float health = playerScript.getHealth();
 
-		spawnZombieAtPosition(playerPos.x + 10f, 1.5f, playerPos.z);
-		spawnZombieAtPosition(playerPos.x - 10f, 1.5f, playerPos.z);
-		spawnZombieAtPosition(playerPos.x, 1.5f, playerPos.z + 10f);
-		spawnZombieAtPosition(playerPos.x, 1.5f, playerPos.z - 10f);
+		for (int i = 0; i < (health / 10) - 4; i++) { // spawn enemies if high health
+			spawnZombieAtPosition (playerPos.x + 10f, 1.5f, playerPos.z);
+			spawnZombieAtPosition (playerPos.x - 10f, 1.5f, playerPos.z);
+			spawnZombieAtPosition (playerPos.x, 1.5f, playerPos.z + 10f);
+			spawnZombieAtPosition (playerPos.x, 1.5f, playerPos.z - 10f);
+		}
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using System;
 
 public class PlayerCharacter : MonoBehaviour {
-	public float health;
+	private float health;
 	public Image healthBar;
 	public GameObject restartDialog;
 
@@ -20,16 +20,19 @@ public class PlayerCharacter : MonoBehaviour {
 	}
 
 	public void Update() {
-		Debug.Log(health);
-		checkHealth();
+		updateHealthBar();
 	}
 
 	public void decreaseHealthOverTime() {
 		subtractHealth(10f);
 	}
 
+	public float getHealth() {
+		return health;
+	}
+
 	//Checks the players current health
-	void checkHealth(){
+	public void updateHealthBar(){
 		healthBar.rectTransform.localScale = new Vector3 (health /100,healthBar.rectTransform.localScale.y,healthBar.rectTransform.localScale.z);
 		if (health <= 0.0f)
 			showRestart (true);
