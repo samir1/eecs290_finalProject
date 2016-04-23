@@ -53,30 +53,38 @@ public class WanderingAI : MonoBehaviour {
 		}
 
 	}
-	
+
+	private void facePlayer() {
+		var lookPos = playerObject.transform.position - transform.position;
+		var rotation = Quaternion.LookRotation(lookPos);
+		transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 2);
+	}
+
 	void Update() {
 		if (_alive) {
 
 			//if very far away zombie speed = 0: idle animation
 			//if somewhat close zombie speed = walking speed: walking animation
-			//if near zombie speed = 8.0*walking speed:running animation
+			//if near zombie speed = 18.0*walking speed:running animation
 
 			Vector3 diff = playerObject.transform.position - transform.position;
 			float range = diff.magnitude;
 
-			if (range > 8.0f && _animState != 0) {
-				anim.SetInteger("zombieToState", 0);
-				_multiplier = 0.0f;
-			}
-
-			if (range > 6.0f && range <= 8.0f && _animState != 1) { 
+			if (range > 8.0f && _animState != 1) {
+				facePlayer();
 				anim.SetInteger("zombieToState", 1);
 				_multiplier = 1.0f;
 			}
 
-			if (range <= 6.0f  && _animState != 3) { 
+//			if (range > 6.0f && range <= 8.0f && _animState != 1) { 
+//				anim.SetInteger("zombieToState", 1);
+//				_multiplier = 1.0f;
+//			}
+
+			if (range <= 6.0f  && _animState != 3) {
+				facePlayer(); 
 				anim.SetInteger("zombieToState", 3);
-				_multiplier = 8.0f;
+				_multiplier = 18.0f;
 			}
 
 			// make sure the enemy ai walks on the terrain
