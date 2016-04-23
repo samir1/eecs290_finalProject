@@ -41,14 +41,14 @@ public class HealthControl : MonoBehaviour {
 			health -= amount;
 	}
 		
-	void OnCollisionEnter(Collision other){
-		//Removes health on collision with zombie
-		if(other.collider.CompareTag("Zombie"))
-			subtractHealth(10f);
-
-		if(other.collider.CompareTag("Health"))
-			addHealth(50f);
-	}
+//	void OnCollisionEnter(Collision other){
+//		//Removes health on collision with zombie
+//		if(other.collider.CompareTag("Zombie"))
+//			subtractHealth(10f);
+//
+//		if(other.collider.CompareTag("Health"))
+//			addHealth(50f);
+//	}
 
 	
 

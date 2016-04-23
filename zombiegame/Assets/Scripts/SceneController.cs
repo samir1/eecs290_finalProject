@@ -31,43 +31,28 @@ public class SceneController : MonoBehaviour {
 			first_round = false;
 
 			for (int i = -5; i < 5; i++) {
-				_enemy = Instantiate (enemyPrefab) as GameObject;
-				_enemy.transform.position = new Vector3 (287.1f + i*2, 1.5f, 870);
-				float angle = Random.Range (0, 360);
-				_enemy.transform.Rotate (0, angle, 0);
-				_enemy.GetComponent<WanderingAI> ().SetAlive (true);
+				spawnZombieAtPosition(287.1f + i*2, 1.5f, 870);
 			}
 		}
 
 	}
 
-	void spawnEnemiesNearPlayer() {
-
-		GameObject playerObject = GameObject.Find("Player");
-		Vector3 playerPos = playerObject.transform.position;
-
+	void spawnZombieAtPosition(float x, float y, float z) {
 		_enemy = Instantiate (enemyPrefab) as GameObject;
-		_enemy.transform.position = new Vector3 (playerPos.x + 10f, 1.5f, playerPos.z);
+		_enemy.transform.position = new Vector3 (x, y, z);
+		_enemy.tag = "Zombie";
 		float angle = Random.Range (0, 360);
 		_enemy.transform.Rotate (0, angle, 0);
 		_enemy.GetComponent<WanderingAI> ().SetAlive (true);
+	}
 
-		_enemy = Instantiate (enemyPrefab) as GameObject;
-		_enemy.transform.position = new Vector3 (playerPos.x - 10f, 1.5f, playerPos.z);
-		angle = Random.Range (0, 360);
-		_enemy.transform.Rotate (0, angle, 0);
-		_enemy.GetComponent<WanderingAI> ().SetAlive (true);
+	void spawnEnemiesNearPlayer() {
+		GameObject playerObject = GameObject.Find("Player");
+		Vector3 playerPos = playerObject.transform.position;
 
-		_enemy = Instantiate (enemyPrefab) as GameObject;
-		_enemy.transform.position = new Vector3 (playerPos.x, 1.5f, playerPos.z + 10f);
-		angle = Random.Range (0, 360);
-		_enemy.transform.Rotate (0, angle, 0);
-		_enemy.GetComponent<WanderingAI> ().SetAlive (true);
-
-		_enemy = Instantiate (enemyPrefab) as GameObject;
-		_enemy.transform.position = new Vector3 (playerPos.x, 1.5f, playerPos.z - 10f);
-		angle = Random.Range (0, 360);
-		_enemy.transform.Rotate (0, angle, 0);
-		_enemy.GetComponent<WanderingAI> ().SetAlive (true);
+		spawnZombieAtPosition(playerPos.x + 10f, 1.5f, playerPos.z);
+		spawnZombieAtPosition(playerPos.x - 10f, 1.5f, playerPos.z);
+		spawnZombieAtPosition(playerPos.x, 1.5f, playerPos.z + 10f);
+		spawnZombieAtPosition(playerPos.x, 1.5f, playerPos.z - 10f);
 	}
 }
