@@ -17,14 +17,31 @@ public class SafeHouse : MonoBehaviour {
 
  
 	void Start () {
-
+		changeTarget ();
 	}
 
 	void FixedUpdate () {
 		movingHouse.position = Vector3.Lerp (movingHouse.position, newPosition, smooth * Time.delatTime);
 	}
 
-
+	void changeTarget() {
+		if (currentState == "Moving to Position2") {
+			currentState = "Moving to Position3";
+			newPosition = position3.position;
+		} else if (currentState == "Moving to Position3") {
+			urrentState = "Moving to Position4";
+			newPosition = position4.position;
+		} else if (currentState == "Moving to Position4") {
+			urrentState = "Moving to Position1";
+			newPosition = position1.position;
+		} else if (currentState == "Moving to Position1") {
+			urrentState = "Moving to Position2";
+			newPosition = position2.position;
+		}else if(currentState == ""){
+			urrentState = "Moving to Position2";
+			newPosition = position2.position;
+		}
+		Invoke ("changeTarget", resetTime);
 }
 
 
