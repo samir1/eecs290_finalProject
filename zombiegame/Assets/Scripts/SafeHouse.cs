@@ -25,20 +25,20 @@ public class SafeHouse : MonoBehaviour {
 	}
 
 	void changeTarget() {
-		if (currentState == "Moving to Position2") {
-			currentState = "Moving to Position3";
+		if (currentState == "Moving to Position 2") {
+			currentState = "Moving to Position 3";
 			newPosition = position3.position;
-		} else if (currentState == "Moving to Position3") {
-			currentState = "Moving to Position4";
+		} else if (currentState == "Moving to Position 3") {
+			currentState = "Moving to Position 4";
 			newPosition = position4.position;
-		} else if (currentState == "Moving to Position4") {
-			currentState = "Moving to Position1";
+		} else if (currentState == "Moving to Position 4") {
+			currentState = "Moving to Position 1";
 			newPosition = position1.position;
-		} else if (currentState == "Moving to Position1") {
-			currentState = "Moving to Position2";
+		} else if (currentState == "Moving to Position 1") {
+			currentState = "Moving to Position 2";
 			newPosition = position2.position;
 		}else if(currentState == ""){
-			currentState = "Moving to Position2";
+			currentState = "Moving to Position 2";
 			newPosition = position2.position;
 		}
 		Invoke ("changeTarget", resetTime);
