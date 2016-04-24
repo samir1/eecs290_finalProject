@@ -3,8 +3,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+    <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{DC006BE3-2681-9728-A831-F2354A363EA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -33,173 +34,171 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.XML" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\..\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEngine.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>..\..\..\..\..\..\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FPS_Character Pack\Script\ModelChanger01.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\EdgeDetectEffect.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\GlowEffect.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Antialiasing.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Bloom.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\BloomOptimized.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Blur.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\BlurOptimized.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\CameraMotionBlur.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ColorCorrectionCurves.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ColorCorrectionLookup.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ColorCorrectionRamp.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ContrastEnhance.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ContrastStretch.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\CreaseShading.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\DepthOfField.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\DepthOfFieldDeprecated.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\EdgeDetection.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Fisheye.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\GlobalFog.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Grayscale.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ImageEffectBase.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ImageEffects.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\MotionBlur.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\NoiseAndGrain.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\NoiseAndScratches.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\PostEffectsHelper.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Quads.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ScreenOverlay.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ScreenSpaceAmbientObscurance.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\SepiaTone.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\SunShafts.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\TiltShift.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Tonemapping.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Triangles.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Twirl.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
-    <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Vortex.cs" />
-    <Compile Include="Assets\Scripts\FPSInput.cs" />
-    <Compile Include="Assets\Scripts\Fireball.cs" />
-    <Compile Include="Assets\Scripts\GameEvent.cs" />
-    <Compile Include="Assets\Scripts\HealthControl.cs" />
-    <Compile Include="Assets\Scripts\Messenger.cs" />
-    <Compile Include="Assets\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\Scripts\PlayerCharacter.cs" />
-    <Compile Include="Assets\Scripts\RayShooter.cs" />
-    <Compile Include="Assets\Scripts\ReactiveTarget.cs" />
-    <Compile Include="Assets\Scripts\RelativeMovement.cs" />
-    <Compile Include="Assets\Scripts\SafeHouse.cs" />
-    <Compile Include="Assets\Scripts\SceneController.cs" />
-    <Compile Include="Assets\Scripts\SettingsPopup.cs" />
-    <Compile Include="Assets\Scripts\UIController.cs" />
-    <Compile Include="Assets\Scripts\UItrigger.cs" />
-    <Compile Include="Assets\Scripts\WanderingAI.cs" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\GlowConeTap.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
-    <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\ani_list.txt" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\MotionBlur.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\GlowCompose.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\RadialBlur.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\frag_ao.cginc" />
-    <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\model_list_Free.txt" />
-    <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\ani_list_Free.txt" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\TiltShift.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\SSAOShader.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\GlowEffectDownsample.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\CreaseApply.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
-    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\GlobalFog.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
-    <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\weapon_list.txt" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
-    <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\Shaders\toon_cutoff.shader" />
-    <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\ani_list_M.txt" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\GrayscaleEffect.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\SepiaToneEffect.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\VortexEffect.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\VignettingShader.shader" />
-    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\Tonemapper.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
-    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
-    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\SimpleClear.shader" />
-    <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\model_list_f.txt" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\EdgeDetectX.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
-    <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\Shaders\toon_hair.shader" />
-    <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
-    <Reference Include="Assembly-UnityScript-firstpass">
-      <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\..\..\..\Applications\Unity\Unity.app\Contents\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>..\..\..\..\..\..\Applications\Unity\Unity.app\Contents\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Compile Include="Assets\Scripts\HoldPlayer.cs" />
+     <Compile Include="Assets\FPS_Character Pack\Script\ModelChanger01.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\EdgeDetectEffect.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\GlowEffect.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Antialiasing.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Bloom.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\BloomOptimized.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Blur.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\BlurOptimized.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\CameraMotionBlur.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ColorCorrectionCurves.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ColorCorrectionLookup.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ColorCorrectionRamp.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ContrastEnhance.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ContrastStretch.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\CreaseShading.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\DepthOfField.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\DepthOfFieldDeprecated.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\EdgeDetection.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Fisheye.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\GlobalFog.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Grayscale.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ImageEffectBase.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ImageEffects.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\MotionBlur.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\NoiseAndGrain.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\NoiseAndScratches.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\PostEffectsHelper.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Quads.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ScreenOverlay.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ScreenSpaceAmbientObscurance.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\SepiaTone.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\SunShafts.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\TiltShift.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Tonemapping.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Triangles.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Twirl.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
+     <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Vortex.cs" />
+     <Compile Include="Assets\Scripts\FPSInput.cs" />
+     <Compile Include="Assets\Scripts\Fireball.cs" />
+     <Compile Include="Assets\Scripts\GameEvent.cs" />
+     <Compile Include="Assets\Scripts\HealthControl.cs" />
+     <Compile Include="Assets\Scripts\HoldPlayer.cs" />
+     <Compile Include="Assets\Scripts\Messenger.cs" />
+     <Compile Include="Assets\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\PlayerCharacter.cs" />
+     <Compile Include="Assets\Scripts\RayShooter.cs" />
+     <Compile Include="Assets\Scripts\ReactiveTarget.cs" />
+     <Compile Include="Assets\Scripts\RelativeMovement.cs" />
+     <Compile Include="Assets\Scripts\SafeHouse.cs" />
+     <Compile Include="Assets\Scripts\SceneController.cs" />
+     <Compile Include="Assets\Scripts\SettingsPopup.cs" />
+     <Compile Include="Assets\Scripts\UIController.cs" />
+     <Compile Include="Assets\Scripts\UItrigger.cs" />
+     <Compile Include="Assets\Scripts\WanderingAI.cs" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
+     <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\ani_list.txt" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\GlowCompose.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\RadialBlur.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+     <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\model_list_Free.txt" />
+     <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\ani_list_Free.txt" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\TiltShift.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\SSAOShader.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\GlowEffectDownsample.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\GlobalFog.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\weapon_list.txt" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
+     <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\Shaders\toon_cutoff.shader" />
+     <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\ani_list_M.txt" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\GrayscaleEffect.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\SepiaToneEffect.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\VortexEffect.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\VignettingShader.shader" />
+     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\Tonemapper.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
+     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
+     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\SimpleClear.shader" />
+     <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\List\model_list_f.txt" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\EdgeDetectX.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+     <None Include="Assets\FPS_Character Pack\Resources\FPS_CharacterPack_F\Shaders\toon_hair.shader" />
+     <None Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>/Users/York/GitHub/eecs290_finalProject/eecs290_finalProject/zombiegame/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{DA989419-BCE6-D057-6658-248C44F04A3F}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
+      <Project>{DA989419-BCE6-D057-6658-248C44F04A3F}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -209,4 +208,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>

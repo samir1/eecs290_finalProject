@@ -21,7 +21,7 @@ public class SafeHouse : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		movingHouse.position = Vector3.Lerp (movingHouse.position, newPosition, smooth * Time.delatTime);
+		movingHouse.position = Vector3.Lerp (movingHouse.position, newPosition, smooth * Time.deltaTime);
 	}
 
 	void changeTarget() {
@@ -29,19 +29,21 @@ public class SafeHouse : MonoBehaviour {
 			currentState = "Moving to Position3";
 			newPosition = position3.position;
 		} else if (currentState == "Moving to Position3") {
-			urrentState = "Moving to Position4";
+			currentState = "Moving to Position4";
 			newPosition = position4.position;
 		} else if (currentState == "Moving to Position4") {
-			urrentState = "Moving to Position1";
+			currentState = "Moving to Position1";
 			newPosition = position1.position;
 		} else if (currentState == "Moving to Position1") {
-			urrentState = "Moving to Position2";
+			currentState = "Moving to Position2";
 			newPosition = position2.position;
 		}else if(currentState == ""){
-			urrentState = "Moving to Position2";
+			currentState = "Moving to Position2";
 			newPosition = position2.position;
 		}
 		Invoke ("changeTarget", resetTime);
+	}
+
 }
 
 
