@@ -46,6 +46,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\FPS_Character Pack\Script\ModelChanger01.cs" />
+     <Compile Include="Assets\MazeGenerator\Scripts\BasicMazeGenerator.cs" />
+     <Compile Include="Assets\MazeGenerator\Scripts\DivisionMazeGenerator.cs" />
+     <Compile Include="Assets\MazeGenerator\Scripts\MazeCell.cs" />
+     <Compile Include="Assets\MazeGenerator\Scripts\MazeSpawner.cs" />
+     <Compile Include="Assets\MazeGenerator\Scripts\OldestTreeMazeGenerator.cs" />
+     <Compile Include="Assets\MazeGenerator\Scripts\RandomTreeMazeGenerator.cs" />
+     <Compile Include="Assets\MazeGenerator\Scripts\RecursiveMazeGenerator.cs" />
+     <Compile Include="Assets\MazeGenerator\Scripts\RecursiveTreeMazeGenerator.cs" />
+     <Compile Include="Assets\MazeGenerator\Scripts\RollerBall.cs" />
+     <Compile Include="Assets\MazeGenerator\Scripts\TreeMazeGenerator.cs" />
      <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\EdgeDetectEffect.cs" />
      <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\GlowEffect.cs" />
      <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Antialiasing.cs" />

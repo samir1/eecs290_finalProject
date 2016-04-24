@@ -3,12 +3,17 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
+
+	public Maze mazePrefab;
+	private Maze mazeInstance;
 	[SerializeField] private GameObject enemyPrefab;
 	private GameObject _enemy;
 	private bool first_round = true;
 
 	void Start() {
 		InvokeRepeating("spawnEnemiesNearPlayer", 30f, 30f);
+		mazeInstance = Instantiate(mazePrefab) as Maze;
+		mazeInstance.Generate();
 	}
 
 //	void OnGUI() {
