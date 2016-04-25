@@ -46,16 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\FPS_Character Pack\Script\ModelChanger01.cs" />
-     <Compile Include="Assets\MazeGenerator\Scripts\BasicMazeGenerator.cs" />
-     <Compile Include="Assets\MazeGenerator\Scripts\DivisionMazeGenerator.cs" />
-     <Compile Include="Assets\MazeGenerator\Scripts\MazeCell.cs" />
-     <Compile Include="Assets\MazeGenerator\Scripts\MazeSpawner.cs" />
-     <Compile Include="Assets\MazeGenerator\Scripts\OldestTreeMazeGenerator.cs" />
-     <Compile Include="Assets\MazeGenerator\Scripts\RandomTreeMazeGenerator.cs" />
-     <Compile Include="Assets\MazeGenerator\Scripts\RecursiveMazeGenerator.cs" />
-     <Compile Include="Assets\MazeGenerator\Scripts\RecursiveTreeMazeGenerator.cs" />
-     <Compile Include="Assets\MazeGenerator\Scripts\RollerBall.cs" />
-     <Compile Include="Assets\MazeGenerator\Scripts\TreeMazeGenerator.cs" />
      <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\EdgeDetectEffect.cs" />
      <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\GlowEffect.cs" />
      <Compile Include="Assets\Realistic Terrain Collection\Other\Effects\ImageEffects\Scripts\Antialiasing.cs" />
@@ -99,8 +89,16 @@
      <Compile Include="Assets\Scripts\FPSInput.cs" />
      <Compile Include="Assets\Scripts\Fireball.cs" />
      <Compile Include="Assets\Scripts\GameEvent.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HealthControl.cs" />
      <Compile Include="Assets\Scripts\HoldPlayer.cs" />
+     <Compile Include="Assets\Scripts\IntVector2.cs" />
+     <Compile Include="Assets\Scripts\Maze.cs" />
+     <Compile Include="Assets\Scripts\MazeCell.cs" />
+     <Compile Include="Assets\Scripts\MazeCellEdge.cs" />
+     <Compile Include="Assets\Scripts\MazeDirection.cs" />
+     <Compile Include="Assets\Scripts\MazePassage.cs" />
+     <Compile Include="Assets\Scripts\MazeWall.cs" />
      <Compile Include="Assets\Scripts\Messenger.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\PlayerCharacter.cs" />
