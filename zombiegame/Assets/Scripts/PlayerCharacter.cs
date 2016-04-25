@@ -8,11 +8,19 @@ public class PlayerCharacter : MonoBehaviour {
 	private float health;
 	public Image healthBar;
 	public GameObject restartDialog;
+	GUIStyle text = new GUIStyle();//Style for HP
+	private AudioSource source;//Sound effect source
+	public AudioClip onHit;//attaches audio component to player
+	private float volL = .5f;//Lower bound for sounds
+	private float volH = 1f;//Higher bound for sounds
+	private bool playerHit = false; //If player is hit
 
 
 	void Start() {
 		health = 100f;
 		InvokeRepeating("decreaseHealthOverTime", 30f, 30f);
+		text.fontSize = 20;
+		text.normal.textColor = Color.white;
 	}
 
 	public void Hurt(int damage) {
@@ -57,12 +65,28 @@ public class PlayerCharacter : MonoBehaviour {
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit) {
-		if (hit.gameObject.CompareTag ("Zombie")) // collision with zombie
-			subtractHealth (10f);
+		//Volume Range for sound effect
+		float vol = UnityEngine.Random.Range (volL, volH);
+
+		//Collide if player has not been hit 
+		if (playerHit == false) {
+			if (hit.gameObject.CompareTag ("Zombie")) { // collision with zombie
+				source.PlayOneShot (onHit, vol);// Plays sound affect every collision with zombie
+				subtractHealth (10f);
+				playerHit = true;//Player has been injured recently
+				StartCoroutine(onHitWait(2));
+			}
+		}
 		else if (hit.gameObject.CompareTag("HealthPack")) { // collision with Health Pack
 			DestroyObject (hit.gameObject);
 			addHealth (50f);
 		}
+	}
+
+	//Limits the amount a player can get hurt per second
+	IEnumerator onHitWait(float waitTime){
+		yield return new WaitForSeconds (waitTime);
+		playerHit = false;
 	}
 
 	//Displays Restart Screen prompt
@@ -77,6 +101,15 @@ public class PlayerCharacter : MonoBehaviour {
 	//Restarts level
 	public void Restart(){
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);	
+	}
+
+	//Updates numerical text on GUI
+	void OnGUI(){
+		GUI.Label (new Rect (60,20,100,20), "HP: " + health, text);
+	}
+		
+	void Awake(){
+		source = GetComponent<AudioSource> ();
 	}
 		
 }
