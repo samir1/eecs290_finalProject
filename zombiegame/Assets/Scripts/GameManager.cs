@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-	
+
 	public Maze mazePrefab;
 
 	private Maze mazeInstance;
@@ -10,9 +10,11 @@ public class GameManager : MonoBehaviour {
 	private void Start () {
 		BeginGame();
 	}
-
+	
 	private void Update () {
-		
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			RestartGame();
+		}
 	}
 
 	private void BeginGame () {
@@ -25,5 +27,4 @@ public class GameManager : MonoBehaviour {
 		Destroy(mazeInstance.gameObject);
 		BeginGame();
 	}
-
 }

@@ -8,12 +8,12 @@ public class Maze : MonoBehaviour {
 
 	public MazeCell cellPrefab;
 
+	public float generationStepDelay;
+
 	public MazePassage passagePrefab;
 	public MazeWall wallPrefab;
 
 	private MazeCell[,] cells;
-
-	public float generationStepDelay;
 
 	public IntVector2 RandomCoordinates {
 		get {
@@ -62,12 +62,10 @@ public class Maze : MonoBehaviour {
 			}
 			else {
 				CreateWall(currentCell, neighbor, direction);
-				// No longer remove the cell here.
 			}
 		}
 		else {
 			CreateWall(currentCell, null, direction);
-			// No longer remove the cell here.
 		}
 	}
 
@@ -77,8 +75,7 @@ public class Maze : MonoBehaviour {
 		newCell.coordinates = coordinates;
 		newCell.name = "Maze Cell " + coordinates.x + ", " + coordinates.z;
 		newCell.transform.parent = transform;
-		newCell.transform.localPosition =
-			new Vector3(coordinates.x - size.x * 0.5f + 0.5f, 0f, coordinates.z - size.z * 0.5f + 0.5f);
+		newCell.transform.localPosition = new Vector3(coordinates.x - size.x * 0.5f + 0.5f, 0f, coordinates.z - size.z * 0.5f + 0.5f);
 		return newCell;
 	}
 
