@@ -3,6 +3,48 @@ guid: 3905ef5b9f8cd42748a77f2c1a1995aa
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: House_C_Chimney
+    100004: House_C_Door
+    100006: House_C_FloorBottom
+    100008: House_C_FloorTop
+    100010: House_C_Roof
+    100012: House_C_WindowBottom_A
+    100014: House_C_WindowBottom_B
+    100016: House_C_WindowDoor
+    100018: House_C_WindowTop_A
+    100020: House_C_WindowTop_B
+    400000: //RootNode
+    400002: House_C_Chimney
+    400004: House_C_Door
+    400006: House_C_FloorBottom
+    400008: House_C_FloorTop
+    400010: House_C_Roof
+    400012: House_C_WindowBottom_A
+    400014: House_C_WindowBottom_B
+    400016: House_C_WindowDoor
+    400018: House_C_WindowTop_A
+    400020: House_C_WindowTop_B
+    2300000: House_C_Chimney
+    2300002: House_C_Door
+    2300004: House_C_FloorBottom
+    2300006: House_C_FloorTop
+    2300008: House_C_Roof
+    2300010: House_C_WindowBottom_A
+    2300012: House_C_WindowBottom_B
+    2300014: House_C_WindowDoor
+    2300016: House_C_WindowTop_A
+    2300018: House_C_WindowTop_B
+    3300000: House_C_Chimney
+    3300002: House_C_Door
+    3300004: House_C_FloorBottom
+    3300006: House_C_FloorTop
+    3300008: House_C_Roof
+    3300010: House_C_WindowBottom_A
+    3300012: House_C_WindowBottom_B
+    3300014: House_C_WindowDoor
+    3300016: House_C_WindowTop_A
+    3300018: House_C_WindowTop_B
     4300000: House_C_WindowTop_A
     4300002: House_C_WindowTop_B
     4300004: House_C_WindowBottom_B
@@ -13,6 +55,7 @@ ModelImporter:
     4300014: House_C_FloorTop
     4300016: House_C_Roof
     4300018: House_C_Chimney
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

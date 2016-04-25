@@ -3,6 +3,48 @@ guid: dd55a4b8f3e694b6a88b30368afcc3eb
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: House_A_Door
+    100004: House_A_FloorBottom
+    100006: House_A_FloorTop
+    100008: House_A_Roof
+    100010: House_A_WindowBottomB
+    100012: House_A_WindowDoorL
+    100014: House_A_WindowDoorR
+    100016: House_A_WindowTopF
+    100018: House_A_WindowTopL
+    100020: House_A_WindowTopR
+    400000: //RootNode
+    400002: House_A_Door
+    400004: House_A_FloorBottom
+    400006: House_A_FloorTop
+    400008: House_A_Roof
+    400010: House_A_WindowBottomB
+    400012: House_A_WindowDoorL
+    400014: House_A_WindowDoorR
+    400016: House_A_WindowTopF
+    400018: House_A_WindowTopL
+    400020: House_A_WindowTopR
+    2300000: House_A_Door
+    2300002: House_A_FloorBottom
+    2300004: House_A_FloorTop
+    2300006: House_A_Roof
+    2300008: House_A_WindowBottomB
+    2300010: House_A_WindowDoorL
+    2300012: House_A_WindowDoorR
+    2300014: House_A_WindowTopF
+    2300016: House_A_WindowTopL
+    2300018: House_A_WindowTopR
+    3300000: House_A_Door
+    3300002: House_A_FloorBottom
+    3300004: House_A_FloorTop
+    3300006: House_A_Roof
+    3300008: House_A_WindowBottomB
+    3300010: House_A_WindowDoorL
+    3300012: House_A_WindowDoorR
+    3300014: House_A_WindowTopF
+    3300016: House_A_WindowTopL
+    3300018: House_A_WindowTopR
     4300000: House_A_WindowTopR
     4300002: House_A_WindowTopL
     4300004: House_A_WindowTopF
@@ -13,6 +55,7 @@ ModelImporter:
     4300014: House_A_Roof
     4300016: House_A_FloorTop
     4300018: House_A_WindowBottomB
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
