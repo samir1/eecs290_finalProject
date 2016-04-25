@@ -9,6 +9,7 @@ public class PlayerCharacter : MonoBehaviour {
 	public Image healthBar;
 	public GameObject restartDialog;
 
+
 	void Start() {
 		health = 100f;
 		InvokeRepeating("decreaseHealthOverTime", 30f, 30f);

@@ -8,9 +8,13 @@ public class SceneController : MonoBehaviour {
 	[SerializeField] private GameObject enemyPrefab;
 	private GameObject _enemy;
 	private bool first_round = true;
+	public Maze mazePrefab;
+	private Maze mazeInstance;
 
 	void Start() {
+		BeginGame();
 		InvokeRepeating("spawnEnemiesNearPlayer", 30f, 30f);
+
 	
 	}
 
@@ -40,6 +44,21 @@ public class SceneController : MonoBehaviour {
 			spawnEnemiesNearPlayer();
 		}
 
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			RestartGame();
+		}
+
+	}
+
+	private void BeginGame () {
+		mazeInstance = Instantiate(mazePrefab) as Maze;
+		StartCoroutine(mazeInstance.Generate());
+	}
+
+	private void RestartGame () {
+		StopAllCoroutines();
+		Destroy(mazeInstance.gameObject);
+		BeginGame();
 	}
 
 	void spawnZombieAtPosition(float x, float y, float z) {
