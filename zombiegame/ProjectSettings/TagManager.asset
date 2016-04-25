@@ -18,6 +18,7 @@ TagManager:
   - WeaponCamera
   - Laser
   - HealthPack
+  - Bat
   layers:
   - Default
   - TransparentFX

@@ -7,10 +7,12 @@ using System.Collections;
 public class RayShooter : MonoBehaviour {
 	private Camera _camera;
 	private GameObject _player;
+	private GameObject _bat;
 
 	public Texture reticle;
 
 	void Start() {
+		_bat = GameObject.Find("BaseballBat");
 		_camera = GetComponent<Camera>();
 		_player = GameObject.Find("Player");
 		_player.layer = LayerMask.NameToLayer("Ignore Raycast");
@@ -20,7 +22,7 @@ public class RayShooter : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		int size = 12;
+		int size = 30;
 		float posX = _camera.pixelWidth/2 - size/4;
 		float posY = _camera.pixelHeight/2 - size/2;
 		//GUI.Label(new Rect(posX, posY, size, size), "*");
@@ -46,6 +48,13 @@ public class RayShooter : MonoBehaviour {
 				}
 			}
 		}
+
+		if (Input.GetMouseButton (0))
+			batAnimation ();
+	}
+
+	private void batAnimation(){
+		_bat.transform.Translate (Vector3.right * Time.deltaTime);
 	}
 
 	private IEnumerator SphereIndicator(Vector3 pos) {
