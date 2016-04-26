@@ -15,6 +15,11 @@ public class SceneController : MonoBehaviour {
 		BeginGame();
 		InvokeRepeating("spawnEnemiesNearPlayer", 30f, 30f);
 
+		// put all the health packs on the terrain
+		GameObject[] hps = GameObject.FindGameObjectsWithTag("HealthPack");
+		foreach (GameObject hp in hps) {
+			hp.transform.position = new Vector3 (hp.transform.position.x, Terrain.activeTerrain.SampleHeight (hp.transform.position), hp.transform.position.z);
+		}
 	
 	}
 
