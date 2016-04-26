@@ -19,6 +19,8 @@ TagManager:
   - Laser
   - HealthPack
   - Bat
+  - Floor
+  - SafeHouse
   layers:
   - Default
   - TransparentFX

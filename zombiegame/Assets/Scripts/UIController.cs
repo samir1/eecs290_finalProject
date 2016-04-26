@@ -3,10 +3,10 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class UIController : MonoBehaviour {
-	[SerializeField] private Text scoreLabel;
+//	[SerializeField] private Text scoreLabel;
 	[SerializeField] private SettingsPopup settingsPopup;
 
-	private int _score;
+//	private int _score;
 
 	void Awake() {
 		Messenger.AddListener(GameEvent.ENEMY_HIT, OnEnemyHit);
@@ -16,15 +16,15 @@ public class UIController : MonoBehaviour {
 	}
 
 	void Start() {
-		_score = 0;
-		scoreLabel.text = _score.ToString();
+//		_score = 0;
+//		scoreLabel.text = _score.ToString();
 
 		settingsPopup.Close();
 	}
 
 	private void OnEnemyHit() {
-		_score += 1;
-		scoreLabel.text = _score.ToString();
+//		_score += 1;
+//		scoreLabel.text = _score.ToString();
 	}
 
 	public void OnOpenSettings() {

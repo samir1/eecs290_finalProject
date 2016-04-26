@@ -40,7 +40,6 @@ public class SceneController : MonoBehaviour {
 		GameObject[] zombies = GameObject.FindGameObjectsWithTag("Zombie");
 		foreach (GameObject zmb in zombies) {
 			float distanceSqr = (zmb.transform.position - playerPos).sqrMagnitude;
-			Debug.Log(distanceSqr);
 			if (distanceSqr < 400)
 				closeByZmb++;
 		}

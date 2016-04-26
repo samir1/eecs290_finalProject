@@ -81,6 +81,11 @@ public class PlayerCharacter : MonoBehaviour {
 			DestroyObject (hit.gameObject);
 			addHealth (50f);
 		}
+
+		else if (hit.gameObject.CompareTag("SafeHouse")) { // collision with SafeHouse
+			Debug.Log("Game Over");
+			Application.Quit();
+		}
 	}
 
 	//Limits the amount a player can get hurt per second

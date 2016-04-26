@@ -4,44 +4,41 @@ using System.Collections;
 public class SafeHouse : MonoBehaviour {
 
 
-	public Transform movingHouse;
-	public Transform position1;
-	public Transform position2;
-	public Transform position3;
-	public Transform position4;
+	public GameObject position1;
+	public GameObject position2;
+	public GameObject position3;
+	public GameObject position4;
+	public GameObject safeHouse;
 
 	public Vector3 newPosition;
 	public string currentState;
 	public float smooth;
 	public float resetTime;
 
- 
+
 	void Start () {
-		changeTarget ();
+		InvokeRepeating("changeLocation", 30f, 30f);
 	}
 
-	void FixedUpdate () {
-		movingHouse.position = Vector3.Lerp (movingHouse.position, newPosition, smooth * Time.deltaTime);
-	}
-
-	void changeTarget() {
-		if (currentState == "Moving to Position 2") {
-			currentState = "Moving to Position 3";
-			newPosition = position3.position;
-		} else if (currentState == "Moving to Position 3") {
-			currentState = "Moving to Position 4";
-			newPosition = position4.position;
-		} else if (currentState == "Moving to Position 4") {
-			currentState = "Moving to Position 1";
-			newPosition = position1.position;
-		} else if (currentState == "Moving to Position 1") {
-			currentState = "Moving to Position 2";
-			newPosition = position2.position;
-		}else if(currentState == ""){
-			currentState = "Moving to Position 2";
-			newPosition = position2.position;
+	void changeLocation() {
+		int randomNum = Random.Range(1, 5);
+		switch (randomNum) {
+		case 1:
+			safeHouse.transform.position = new Vector3(position1.transform.position.x, Terrain.activeTerrain.SampleHeight(transform.position), position1.transform.position.z);
+			break;
+		case 2:
+			safeHouse.transform.position = new Vector3(position2.transform.position.x, Terrain.activeTerrain.SampleHeight(transform.position), position2.transform.position.z);
+			break;
+		case 3:
+			safeHouse.transform.position = new Vector3(position3.transform.position.x, Terrain.activeTerrain.SampleHeight(transform.position), position3.transform.position.z);
+			break;
+		case 4:
+			safeHouse.transform.position = new Vector3(position4.transform.position.x, Terrain.activeTerrain.SampleHeight(transform.position), position4.transform.position.z);
+			break;
+		default:
+			print ("Unknown location");
+			break;
 		}
-		Invoke ("changeTarget", resetTime);
 	}
 
 }

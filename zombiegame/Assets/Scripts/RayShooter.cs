@@ -12,12 +12,12 @@ public class RayShooter : MonoBehaviour {
 	Vector3 originalPos;
 	Quaternion originalRot;
 	void Start() {
-		_bat = GameObject.Find("BaseballBat");
+//		_bat = GameObject.Find("BaseballBat");
 		_camera = GetComponent<Camera>();
 		_player = GameObject.Find("Player");
 		_player.layer = LayerMask.NameToLayer("Ignore Raycast");
-		originalPos = _bat.transform.localPosition;
-		originalRot = _bat.transform.localRotation;
+//		originalPos = _bat.transform.localPosition;
+//		originalRot = _bat.transform.localRotation;
 		//Cursor.lockState = CursorLockMode.Locked;
 		//Cursor.visible = false;
 	}
@@ -50,18 +50,18 @@ public class RayShooter : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetMouseButton (0))
-			batAnimation ();
-		else {
-			_bat.transform.localPosition = originalPos;
-			_bat.transform.localRotation = originalRot;
-		}
+//		if (Input.GetMouseButton (0))
+//			batAnimation ();
+//		else {
+//			_bat.transform.localPosition = originalPos;
+//			_bat.transform.localRotation = originalRot;
+//		}
 	}
 		
-	private void batAnimation(){
-		_bat.transform.Translate (new Vector3(1f, -.3f, -.4f) * Time.deltaTime);
-		_bat.transform.Rotate (new Vector3(1f,.3f, .4f), 30 * Time.deltaTime);
-	}
+//	private void batAnimation(){
+//		_bat.transform.Translate (new Vector3(1f, -.3f, -.4f) * Time.deltaTime);
+//		_bat.transform.Rotate (new Vector3(1f,.3f, .4f), 30 * Time.deltaTime);
+//	}
 
 	private IEnumerator SphereIndicator(Vector3 pos) {
 		GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
