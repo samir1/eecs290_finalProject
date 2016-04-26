@@ -18,36 +18,33 @@ public class SceneController : MonoBehaviour {
 	
 	}
 
-//	void OnGUI() {
-//		if (_enemy == null &&!first_round) {
-//			var style = new GUIStyle("label");
-//			style.fontSize = 80;
-//			GUI.Label(new Rect (Screen.width / 2, Screen.height, 150, 25), "<size=40>Lose</size>");
-////			GUI.Label (Rect(9, 30, 500, 20), "Congratulations! You have saved Earth from the Zombie Apocalypse!", style); 
-//			if (GUI.Button (new Rect (Screen.width / 2, 3*Screen.height / 4, 150, 25), "Start Game")) {
-//				SceneManager.LoadScene("Scene") ;
-//			}
-//			if (GUI.Button (new Rect (Screen.width / 2, 3*Screen.height / 4 + 25, 150, 25), "End Game")) {
-//				Application.Quit();
-//			}
-//		}
-//	}
-
 	void Update() {
+		
 		if (_enemy == null && first_round) {
 			first_round = false;
 
 			for (int i = -5; i < 5; i++) {
 				spawnZombieAtPosition (287.1f + i * 2, 1.5f, 870);
 			}
-		} else if (_enemy == null && !first_round) { // spawn enemies if none on the map
+		} else if (GameObject.FindGameObjectsWithTag("Zombie").Length <= 2 && !first_round) { // spawn enemies if none on the map
+			spawnEnemiesNearPlayer();
+		} else if (!nearByZombiesExist() && !first_round) { // spawn enemies if there are none near to the character
 			spawnEnemiesNearPlayer();
 		}
 
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			RestartGame();
-		}
+	}
 
+	private bool nearByZombiesExist(){
+		int closeByZmb = 0;
+		Vector3 playerPos = GameObject.Find("Player").transform.position;
+		GameObject[] zombies = GameObject.FindGameObjectsWithTag("Zombie");
+		foreach (GameObject zmb in zombies) {
+			float distanceSqr = (zmb.transform.position - playerPos).sqrMagnitude;
+			Debug.Log(distanceSqr);
+			if (distanceSqr < 400)
+				closeByZmb++;
+		}
+		return closeByZmb >= 3;
 	}
 
 	private void BeginGame () {
@@ -74,13 +71,10 @@ public class SceneController : MonoBehaviour {
 		GameObject playerObject = GameObject.Find("Player");
 		Vector3 playerPos = playerObject.transform.position;
 		PlayerCharacter playerScript = playerObject.GetComponent<PlayerCharacter>();
-		float health = playerScript.getHealth();
-
-		for (int i = 0; i < (health / 10) - 4; i++) { // spawn enemies if high health
-			spawnZombieAtPosition (playerPos.x + 10f, 1.5f, playerPos.z);
-			spawnZombieAtPosition (playerPos.x - 10f, 1.5f, playerPos.z);
-			spawnZombieAtPosition (playerPos.x, 1.5f, playerPos.z + 10f);
-			spawnZombieAtPosition (playerPos.x, 1.5f, playerPos.z - 10f);
-		}
+//		float health = playerScript.getHealth();
+		spawnZombieAtPosition (playerPos.x + 10f, 1.5f, playerPos.z);
+		spawnZombieAtPosition (playerPos.x - 10f, 1.5f, playerPos.z);
+		spawnZombieAtPosition (playerPos.x, 1.5f, playerPos.z + 10f);
+		spawnZombieAtPosition (playerPos.x, 1.5f, playerPos.z - 10f);
 	}
 }
