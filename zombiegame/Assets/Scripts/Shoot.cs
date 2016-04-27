@@ -15,12 +15,12 @@ public class Shoot : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Input.GetKey (KeyCode.Mouse0) && counter > delayTime) {
-			Instantiate (bullet, transform.position, transform.rotation);
-			source.PlayOneShot (onShoot);
-			counter = 0;
-		}
-		counter += 1 * Time.deltaTime;
+//		if (Input.GetKey (KeyCode.Mouse0) && counter > delayTime) {
+//			Instantiate (bullet, transform.position, transform.rotation);
+//			source.PlayOneShot (onShoot);
+//			counter = 0;
+//		}
+//		counter += 1 * Time.deltaTime;
 
 	}
 }

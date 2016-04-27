@@ -51,12 +51,12 @@ public class RayShooter : MonoBehaviour {
 			}
 		}
 
-//		if (Input.GetMouseButton (0))
-//			batAnimation ();
-//		else {
-//			_bat.transform.localPosition = originalPos;
-//			_bat.transform.localRotation = originalRot;
-//		}
+		if (Input.GetMouseButton (0))
+			batAnimation ();
+		else {
+			_bat.transform.localPosition = originalPos;
+			_bat.transform.localRotation = originalRot;
+		}
 	}
 		
 //	private void batAnimation(){

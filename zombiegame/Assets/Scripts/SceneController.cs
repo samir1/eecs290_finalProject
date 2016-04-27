@@ -52,13 +52,13 @@ public class SceneController : MonoBehaviour {
 	}
 
 	private void BeginGame () {
-		mazeInstance = Instantiate(mazePrefab) as Maze;
-		StartCoroutine(mazeInstance.Generate());
+//		mazeInstance = Instantiate(mazePrefab) as Maze;
+//		StartCoroutine(mazeInstance.Generate());
 	}
 
 	private void RestartGame () {
-		StopAllCoroutines();
-		Destroy(mazeInstance.gameObject);
+//		StopAllCoroutines();
+//		Destroy(mazeInstance.gameObject);
 		BeginGame();
 	}
 
@@ -74,7 +74,7 @@ public class SceneController : MonoBehaviour {
 	void spawnEnemiesNearPlayer() {
 		GameObject playerObject = GameObject.Find("Player");
 		Vector3 playerPos = playerObject.transform.position;
-		PlayerCharacter playerScript = playerObject.GetComponent<PlayerCharacter>();
+//		PlayerCharacter playerScript = playerObject.GetComponent<PlayerCharacter>();
 //		float health = playerScript.getHealth();
 		spawnZombieAtPosition (playerPos.x + 10f, 1.5f, playerPos.z);
 		spawnZombieAtPosition (playerPos.x - 10f, 1.5f, playerPos.z);

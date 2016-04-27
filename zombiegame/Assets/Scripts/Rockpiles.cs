@@ -40,7 +40,8 @@ public class Rockpiles : MonoBehaviour {
 
 
 	void Start () {
-		changeTarget ();
+		changeTarget();
+		InvokeRepeating("changeTarget", 5f, 5f);
 	}
 
 	void FixedUpdate() {
@@ -53,23 +54,27 @@ public class Rockpiles : MonoBehaviour {
 
 	}
 
+	Vector3 positionOnMap(Vector3 position) {
+		return new Vector3 (position.x, Terrain.activeTerrain.SampleHeight(position), position.z);
+	}
+
 	void changeTarget(){
 
 		//rock8
 		if (currentState8 == "Rock8 Moving to position 1"){
 			
 			currentState8 = "Rock8 Moving to position 2";
-			newPosition8 = Rock8_position2.position;
+			newPosition8 = positionOnMap(Rock8_position2.position);
 
 		}else if(currentState8 == "Rock8 Moving to position 2"){
 			
 			currentState8 = "Rock8 Moving to position 1";
-			newPosition8 = Rock8_position1.position;
+			newPosition8 = positionOnMap(Rock8_position1.position);
 			
 		}else if(currentState8 == ""){
 			
 			currentState8 = "Rock8 Moving to position 2";
-			newPosition8 = Rock8_position2.position;
+			newPosition8 = positionOnMap(Rock8_position2.position);
 		}
 
 		//rock19
@@ -77,17 +82,17 @@ public class Rockpiles : MonoBehaviour {
 		if (currentState19 == "Rock19 Moving to position 1"){
 
 			currentState19 = "Rock19 Moving to position 2";
-			newPosition19 = Rock19_position2.position;
+			newPosition19 = positionOnMap(Rock19_position2.position);
 
 		}else if(currentState19 == "Rock19 Moving to position 2"){
 
 			currentState19 = "Rock19 Moving to position 1";
-			newPosition19 = Rock19_position1.position;
+			newPosition19 = positionOnMap(Rock19_position1.position);
 
 		}else if(currentState19 == ""){
 
 			currentState19 = "Rock19 Moving to position 2";
-			newPosition19 = Rock19_position2.position;
+			newPosition19 = positionOnMap(Rock19_position2.position);
 		}
 
 		//rock12
@@ -95,34 +100,34 @@ public class Rockpiles : MonoBehaviour {
 		if (currentState12 == "Rock12 Moving to position 1"){
 
 			currentState12 = "Rock12 Moving to position 2";
-			newPosition12 = Rock12_position2.position;
+			newPosition12 = positionOnMap(Rock12_position2.position);
 
 		}else if(currentState12 == "Rock12 Moving to position 2"){
 
 			currentState12 = "Rock12 Moving to position 1";
-			newPosition12 = Rock12_position1.position;
+			newPosition12 = positionOnMap(Rock12_position1.position);
 
 		}else if(currentState12 == ""){
 
 			currentState12 = "Rock12 Moving to position 2";
-			newPosition12 = Rock12_position2.position;
+			newPosition12 = positionOnMap(Rock12_position2.position);
 		}
 
 		//Rock 6
 		if (currentState6 == "Rock6 Moving to position 1"){
 
 			currentState6 = "Rock6 Moving to position 2";
-			newPosition6 = Rock6_position2.position;
+			newPosition6 = positionOnMap(Rock6_position2.position);
 
 		}else if(currentState6 == "Rock6 Moving to position 2"){
 
 			currentState6 = "Rock6 Moving to position 1";
-			newPosition6 = Rock6_position1.position;
+			newPosition6 = positionOnMap(Rock6_position1.position);
 
 		}else if(currentState6 == ""){
 
 			currentState6 = "Rock6 Moving to position 2";
-			newPosition6 = Rock6_position2.position;
+			newPosition6 = positionOnMap(Rock6_position2.position);
 		}
 
 		//Rock 14
@@ -130,17 +135,17 @@ public class Rockpiles : MonoBehaviour {
 		if (currentState14 == "Rock14 Moving to position 1"){
 
 			currentState14 = "Rock14 Moving to position 2";
-			newPosition14 = Rock14_position2.position;
+			newPosition14 = positionOnMap(Rock14_position2.position);
 
 		}else if(currentState14 == "Rock14 Moving to position 2"){
 
 			currentState14 = "Rock14 Moving to position 1";
-			newPosition14 = Rock14_position1.position;
+			newPosition14 = positionOnMap(Rock14_position1.position);
 
 		}else if(currentState14 == ""){
 
 			currentState14 = "Rock14 Moving to position 2";
-			newPosition14 = Rock14_position2.position;
+			newPosition14 = positionOnMap(Rock14_position2.position);
 		}
 
 		Invoke("ChangeTarget", resetTime);
