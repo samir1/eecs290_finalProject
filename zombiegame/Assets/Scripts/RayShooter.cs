@@ -25,7 +25,7 @@ public class RayShooter : MonoBehaviour {
 	void OnGUI() {
 		int size = 30;
 		float posX = _camera.pixelWidth/2 - size/4;
-		float posY = _camera.pixelHeight/2 - size/2;
+		float posY = _camera.pixelHeight/2 - size/2-5;
 		//GUI.Label(new Rect(posX, posY, size, size), "*");
 		GUI.DrawTexture(new Rect(posX, posY, size, size), reticle);
 	}
@@ -44,8 +44,9 @@ public class RayShooter : MonoBehaviour {
 					target.ReactToHit();
 					Messenger.Broadcast(GameEvent.ENEMY_HIT);
 				} else {
-					if(hitObject.tag != "UITrigger")
-						StartCoroutine(SphereIndicator(hit.point));
+					if (hitObject.tag != "UITrigger") {
+//						StartCoroutine (SphereIndicator (hit.point));
+					}
 				}
 			}
 		}
