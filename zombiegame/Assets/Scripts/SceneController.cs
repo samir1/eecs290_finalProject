@@ -10,9 +10,17 @@ public class SceneController : MonoBehaviour {
 	private bool first_round = true;
 	public Maze mazePrefab;
 	private Maze mazeInstance;
+	private bool paused = false;
+	GUIStyle text = new GUIStyle();
+	private int size = 100;
 
 	void Start() {
-		BeginGame();
+		
+//		BeginGame();
+
+		text.fontSize = 40;
+		text.normal.textColor = Color.white;
+
 		InvokeRepeating("spawnEnemiesNearPlayer", 30f, 30f);
 
 		// put all the health packs on the terrain
@@ -23,7 +31,31 @@ public class SceneController : MonoBehaviour {
 	
 	}
 
+	void OnGUI(){
+
+
+
+		float posX = Screen.width/2 - size/4-(size/2);
+		float posY = Screen.height/2 - size/2-(size/2);
+//		GUI.Label(new Rect(posX, posY, size, size), "*");
+//		GUI.DrawTexture(new Rect(posX, posY, size, size), reticle);
+
+		if (paused)
+			GUI.Label (new Rect (posX,posY,size,size), "PAUSED", text);
+	}
+
 	void Update() {
+
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			if (paused) {
+				Time.timeScale = 1;
+				paused = false;
+			} else {
+				Time.timeScale = 0;
+				paused = true;
+			}
+
+		}
 		
 		if (_enemy == null && first_round) {
 			first_round = false;
@@ -36,6 +68,7 @@ public class SceneController : MonoBehaviour {
 		} else if (!nearByZombiesExist() && !first_round) { // spawn enemies if there are none near to the character
 			spawnEnemiesNearPlayer();
 		}
+
 
 	}
 
