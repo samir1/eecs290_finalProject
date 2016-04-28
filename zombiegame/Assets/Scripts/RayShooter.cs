@@ -7,7 +7,7 @@ using System.Collections;
 public class RayShooter : MonoBehaviour {
 	private Camera _camera;
 	private GameObject _player;
-	private GameObject _bat;
+//	private GameObject _bat;
 	public Texture reticle;
 	Vector3 originalPos;
 	Quaternion originalRot;
@@ -51,12 +51,12 @@ public class RayShooter : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetMouseButton (0))
-			batAnimation ();
-		else {
-			_bat.transform.localPosition = originalPos;
-			_bat.transform.localRotation = originalRot;
-		}
+//		if (Input.GetMouseButton (0))
+//			batAnimation ();
+//		else {
+//			_bat.transform.localPosition = originalPos;
+//			_bat.transform.localRotation = originalRot;
+//		}
 	}
 		
 //	private void batAnimation(){

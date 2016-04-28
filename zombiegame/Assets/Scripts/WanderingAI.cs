@@ -82,7 +82,7 @@ public class WanderingAI : MonoBehaviour {
 
 			if (range <= 10.0f  && _animState != 3) {
 				anim.SetInteger("zombieToState", 3);
-				_multiplier = 18.0f;
+				_multiplier = 19.0f;
 			}
 
 			// make sure the enemy ai walks on the terrain
