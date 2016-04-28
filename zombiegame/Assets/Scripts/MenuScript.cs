@@ -7,6 +7,8 @@ public class MenuScript : MonoBehaviour {
 	public Canvas quitMenu;
 	public Button startButton;
 	public Button exitButton;
+	public Button levelButton;
+
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +16,7 @@ public class MenuScript : MonoBehaviour {
 		startButton = startButton.GetComponent<Button> ();
 		exitButton = exitButton.GetComponent<Button> ();
 		quitMenu.enabled = false;
+		levelButton = levelButton.GetComponent<Button> ();
 	}
 	
 	// Update is called once per frame
@@ -36,10 +39,14 @@ public class MenuScript : MonoBehaviour {
 
 
 	public void StartLevel(){
-		SceneManager.LoadScene ("SceneZombie");
+		SceneManager.LoadScene ("StoryDialogue");
 	}
 
 	public void ExitGame(){
 		Application.Quit();
+	}
+
+	public void AdvanceScene(){
+		SceneManager.LoadScene ("SceneZombie");
 	}
 }

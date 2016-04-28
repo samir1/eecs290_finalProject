@@ -41,6 +41,10 @@ public class SafeHouse : MonoBehaviour {
 		}
 	}
 
+	void Update(){
+		
+	}
+
 }
 
 

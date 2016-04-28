@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start Scene.unity
   - enabled: 1
+    path: Assets/Scenes/StoryDialogue.unity
+  - enabled: 1
     path: Assets/Scenes/SceneZombie.unity
+  - enabled: 1
+    path: Assets/Scenes/END SCENE.unity

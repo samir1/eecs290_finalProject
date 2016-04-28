@@ -84,7 +84,7 @@ public class PlayerCharacter : MonoBehaviour {
 
 		else if (hit.gameObject.CompareTag("SafeHouse")) { // collision with SafeHouse
 			Debug.Log("Game Over");
-			Application.Quit();
+			SceneManager.LoadScene ("END SCENE");
 		}
 	}
 
