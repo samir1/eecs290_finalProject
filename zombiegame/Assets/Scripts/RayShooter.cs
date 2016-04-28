@@ -8,6 +8,8 @@ public class RayShooter : MonoBehaviour {
 	private Camera _camera;
 	private GameObject _player;
 //	private GameObject _bat;
+	private AudioSource source;//Sound effect source
+	public AudioClip shoot;//attaches audio component to player
 	public Texture reticle;
 	Vector3 originalPos;
 	Quaternion originalRot;
@@ -32,6 +34,7 @@ public class RayShooter : MonoBehaviour {
 
 	void Update() {
 		if (Input.GetKeyDown(KeyCode.Space) && !EventSystem.current.IsPointerOverGameObject()) {
+			source.PlayOneShot (shoot, 0.5f);// Plays sound effect from gun shot
 			Vector3 point = new Vector3(_camera.pixelWidth/2, _camera.pixelHeight/2, 0);
 			Ray ray = _camera.ScreenPointToRay(point);
 			ray.origin = new Vector3(_player.transform.position.x, _player.transform.position.y+1.3f, _player.transform.position.z);
@@ -71,5 +74,9 @@ public class RayShooter : MonoBehaviour {
 		yield return new WaitForSeconds(1);
 
 		Destroy(sphere);
+	}
+
+	void Awake(){
+		source = GetComponent<AudioSource> ();
 	}
 }

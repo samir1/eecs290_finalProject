@@ -43,8 +43,11 @@ public class PlayerCharacter : MonoBehaviour {
 	//Checks the players current health
 	public void updateHealthBar(){
 		healthBar.rectTransform.localScale = new Vector3 (health /100,healthBar.rectTransform.localScale.y,healthBar.rectTransform.localScale.z);
-		if (health <= 0.0f)
-			showRestart (true);
+		if (health <= 0.0f) {
+//			SceneManager.UnloadScene("SceneZombie");	
+			SceneManager.LoadScene("SceneZombie");	
+		}
+//			showRestart (true);
 	}
 
 	//adds to health to player
@@ -105,7 +108,7 @@ public class PlayerCharacter : MonoBehaviour {
 
 	//Restarts level
 	public void Restart(){
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);	
+		SceneManager.LoadScene ("SceneZombie");	
 	}
 
 	//Updates numerical text on GUI

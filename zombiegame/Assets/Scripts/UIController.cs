@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour {
 //		_score = 0;
 //		scoreLabel.text = _score.ToString();
 
-		settingsPopup.Close();
+//		settingsPopup.Close();
 	}
 
 	private void OnEnemyHit() {
