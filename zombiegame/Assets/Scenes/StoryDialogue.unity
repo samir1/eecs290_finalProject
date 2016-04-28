@@ -403,7 +403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Everyone has DIED TO the OUTBREAK
+  m_Text: Everyone has died in the outbreak
 --- !u!222 &463618214
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -528,7 +528,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -206}
+  m_AnchoredPosition: {x: 10, y: -188}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904082302
@@ -563,7 +563,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: GoodLUCK........
+  m_Text: Good LUCK........
 --- !u!222 &904082303
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Your Goal is to......
+  m_Text: Make it to the safe house to.....
 --- !u!222 &988685033
 CanvasRenderer:
   m_ObjectHideFlags: 0
