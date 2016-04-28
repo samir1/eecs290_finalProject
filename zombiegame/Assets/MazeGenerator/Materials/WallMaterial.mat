@@ -215,6 +215,10 @@ Material:
         second: 0
       data:
         first:
+          name: _InvFade
+        second: 1
+      data:
+        first:
           name: _Parallax
         second: 0.02
       data:
@@ -253,10 +257,6 @@ Material:
         first:
           name: _EmissionScaleUI
         second: 0
-      data:
-        first:
-          name: _InvFade
-        second: 1
       data:
         first:
           name: _Cull

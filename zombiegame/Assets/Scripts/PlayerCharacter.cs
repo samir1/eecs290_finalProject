@@ -74,7 +74,7 @@ public class PlayerCharacter : MonoBehaviour {
 				source.PlayOneShot (onHit, vol);// Plays sound affect every collision with zombie
 				subtractHealth (10f);
 				playerHit = true;//Player has been injured recently
-				StartCoroutine(onHitWait(2));
+				StartCoroutine(onHitWait(1.5f));
 			}
 		}
 		else if (hit.gameObject.CompareTag("HealthPack")) { // collision with Health Pack

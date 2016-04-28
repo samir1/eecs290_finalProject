@@ -7,8 +7,8 @@ public class WanderingAI : MonoBehaviour {
 	public float speed;
 	public float obstacleRange = 5.0f;
 	
-	[SerializeField] private GameObject fireballPrefab;
-	private GameObject _fireball;
+//	[SerializeField] private GameObject fireballPrefab;
+//	private GameObject _fireball;
 	private GameObject playerObject;
 	
 	private bool _alive;

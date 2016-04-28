@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/END SCENE.unity
+- path: Assets/Scenes/SceneZombie.unity
   isLoaded: 1
   isActive: 1
