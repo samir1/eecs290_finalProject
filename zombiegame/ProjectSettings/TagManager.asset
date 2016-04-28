@@ -21,6 +21,7 @@ TagManager:
   - Bat
   - Floor
   - SafeHouse
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Back
   - 
   - 
   - 
